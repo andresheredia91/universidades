@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="headerCustom">
+    <div class="backButtom">
+      <ion-button fill="clear" color="light" (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+  <ion-card>
+    <ion-card-title> </ion-card-title>
+    <ion-card-content>
+      <ion-item-divider color="secondary">
+        <ion-label>
+          MISION
+        </ion-label>
+      </ion-item-divider>
+      {{university.mision}}
+      <ion-item-divider color="secondary">
+        <ion-label>
+          VISION
+        </ion-label>
+      </ion-item-divider>
+      {{university.vision}}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

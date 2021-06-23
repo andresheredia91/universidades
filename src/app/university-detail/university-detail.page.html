@@ -1,0 +1,80 @@
+<ion-content fullscreen="true">
+
+  <div class="headerCustom">
+    <div class="backButtom">
+      <ion-button fill="clear" color="light" (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-img [src]='university.foto'> </ion-img>
+    <div>
+    <span class="titleHeader" [style.background-color]="university.colorTransparent">
+      {{university.nombre}}
+    </span>
+    </div>
+
+  </div>
+
+<!--
+
+  
+  <ion-card>
+    <ion-card-title>  </ion-card-title>
+    </ion-card-header>
+
+        <ion-button>
+      Ver Misión/Visión
+      <ion-icon slot="end" name="book"></ion-icon>
+    </ion-button>
+
+    <ion-button>
+      Ver Misión/Visión
+      <ion-icon slot="end" name="book"></ion-icon>
+    </ion-button>
+    <ion-card-content>
+      <ion-item-divider color="secondary">
+        <ion-label>
+          MISION
+        </ion-label>
+      </ion-item-divider>
+      {{university.mision}}
+      <ion-item-divider color="secondary">
+        <ion-label>
+          VISION
+        </ion-label>
+      </ion-item-divider>
+      {{university.vision}}
+    </ion-card-content>
+  </ion-card>
+  
+-->
+
+
+<ion-button [routerLink]="['/mision-vision', idUniversity]">
+  Ver Misión/Visión
+</ion-button>
+<ion-button [routerLink]="['/lista-programas', idUniversity]">
+  Ver lista de Programas
+</ion-button>
+
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <p class="ion-text-center textOverview">Metodos de financiamiento </p>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin-bottom: 20px;">
+      <ion-col size="12">
+        <ion-row>
+          <ion-col *ngFor="let tipoFinanciacion of tiposFinanciacion" size="4">
+            <ion-img [src]='tipoFinanciacion.logo'> </ion-img>
+            <span class="labelTitle"> {{tipoFinanciacion.nombre}} </span>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

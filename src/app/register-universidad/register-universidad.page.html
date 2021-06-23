@@ -1,0 +1,269 @@
+<!--<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+
+
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+    <ion-button fill="clear" color="primary" (click)="back()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+		<ion-title class="ion-text-center title-font">Registro</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+  <svg class="back-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#F1C21B"
+      d="M37.6,-44.7C46.8,-37.1,51,-23.4,57.7,-7C64.4,9.4,73.6,28.6,66.4,35.7C59.2,42.9,35.6,37.9,16.5,44.6C-2.6,51.3,-17.3,69.5,-26.7,68.3C-36.1,67.1,-40.2,46.3,-49.6,29.1C-59,11.9,-73.6,-1.8,-75.1,-16.8C-76.7,-31.7,-65.3,-47.9,-50.6,-54.6C-35.9,-61.2,-17.9,-58.3,-1.9,-56.1C14.2,-53.9,28.4,-52.3,37.6,-44.7Z"
+      transform="translate(100 100)" />
+  </svg>
+
+  <div class="ion-padding">
+
+    <form class="ion-padding" #universidadForm="ngForm" (ngSubmit)="onSubmit(universidadForm)">
+      <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="universidadService.selectedUniversidad.$key">
+      
+      <div class="wrap-input">
+        <input class="input" type="text" name="name" #name="ngModel" [(ngModel)]="universidadService.selectedUniversidad.nombre" placeholder="Nombre">
+      </div>
+
+      <div class="wrap-input">
+        <input class="input" type="text" name="nombre_principal" #nombre_principal="ngModel" [(ngModel)]="universidadService.selectedUniversidad.nombre_principal" placeholder="Nombre Principal">
+      </div>
+      <div class="wrap-input">
+        <input class="input" type="text" name="mision" #mision="ngModel" [(ngModel)]="universidadService.selectedUniversidad.mision" placeholder="Misión">
+        </div>
+      <div class="wrap-input">
+        <input class="input" type="text" name="vision" #vision="ngModel" [(ngModel)]="universidadService.selectedUniversidad.vision" placeholder="Visión">
+      </div>
+      <div class="wrap-input">
+        <input class="input" type="text" name="foto" #foto="ngModel" [(ngModel)]="universidadService.selectedUniversidad.foto" placeholder="Foto">
+      </div>
+      <div class="wrap-input">
+        <input class="input" type="text" name="logo" #logo="ngModel" [(ngModel)]="universidadService.selectedUniversidad.logo" placeholder="Logo">
+      </div>
+      <div class="wrap-input">
+        <input class="input" type="text" name="direccion" #direccion="ngModel" [(ngModel)]="universidadService.selectedUniversidad.direccion" placeholder="Dirección">
+      </div>
+      <div class="wrap-input">
+        <input class="input" type="text" name="telefono" #telefono="ngModel" [(ngModel)]="universidadService.selectedUniversidad.telefono" placeholder="Telefono">
+      </div>
+      <div class="wrap-input">
+        <input class="input" type="text" name="color" #color="ngModel" [(ngModel)]="universidadService.selectedUniversidad.color" placeholder="Color">
+      </div>
+      <div class="wrap-input">
+        <input class="input" type="text" name="color_transparent" #color_transparent="ngModel" [(ngModel)]="universidadService.selectedUniversidad.color_transparent" placeholder="Color Transparent">
+      </div>
+      <div class="container-form-btn">
+        <button class="form-btn custom-font" type="submit">
+            <i class="fas fa-plus-circle"></i> REGISTRARSE
+        </button>
+        <button class="form-btn custom-font" type="reset" (click)="resetForm(universidadForm)">
+            <i class="fas fa-sync-alt"></i> LIMPIAR
+        </button>
+      </div>
+
+
+    </form>
+
+  </div>
+
+</ion-content>!-->
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+
+
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+    <ion-button fill="clear" color="primary" (click)="back()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+		<ion-title class="ion-text-center title-font">Registro</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content >
+  <svg class="back-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#F1C21B"
+      d="M37.6,-44.7C46.8,-37.1,51,-23.4,57.7,-7C64.4,9.4,73.6,28.6,66.4,35.7C59.2,42.9,35.6,37.9,16.5,44.6C-2.6,51.3,-17.3,69.5,-26.7,68.3C-36.1,67.1,-40.2,46.3,-49.6,29.1C-59,11.9,-73.6,-1.8,-75.1,-16.8C-76.7,-31.7,-65.3,-47.9,-50.6,-54.6C-35.9,-61.2,-17.9,-58.3,-1.9,-56.1C14.2,-53.9,28.4,-52.3,37.6,-44.7Z"
+      transform="translate(100 100)" />
+  </svg>
+  <div class="ion-padding">
+    <form #universidadForm="ngForm" (ngSubmit)="onSubmit(universidadForm)" class="ion-padding">
+      <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="universidadService.selectedUniversidad.$key">
+      <div class="wrap-input">
+        <input 
+          type="text"
+          class="input"
+          name="nombre"
+          #nombre="ngModel"
+          [(ngModel)]="universidadService.selectedUniversidad.nombre"
+          placeholder="Nombre"
+          >
+      </div>
+      <div class="wrap-input">
+        <input 
+          type="text"
+          class="input"
+          name="principal"
+          #principal="ngModel"
+          [(ngModel)]="universidadService.selectedUniversidad.principal"
+          placeholder="Nombre Principal"
+          >
+      </div>
+    <div class="wrap-input">
+      <input 
+        type="text"
+        class="input"
+        name="mision"
+        #mision="ngModel"
+        [(ngModel)]="universidadService.selectedUniversidad.mision"
+        placeholder="Misión"
+        >
+    </div>
+    <div class="wrap-input">
+      <input 
+        type="text"
+        class="input"
+        name="vision"
+        #vision="ngModel"
+        [(ngModel)]="universidadService.selectedUniversidad.vision"
+        placeholder="Visión"
+        >
+    </div>
+    <div class="wrap-input">
+      <input 
+        type="text"
+        class="input"
+        name="foto"
+        #foto="ngModel"
+        [(ngModel)]="universidadService.selectedUniversidad.foto"
+        placeholder="Foto"
+        >
+    </div>
+    <div class="wrap-input">
+      <input 
+        type="text"
+        class="input"
+        name="logo"
+        #logo="ngModel"
+        [(ngModel)]="universidadService.selectedUniversidad.logo"
+        placeholder="Logo"
+        >
+    </div>
+    <div class="wrap-input">
+      <input 
+        type="text"
+        class="input"
+        name="direccion"
+        #direccion="ngModel"
+        [(ngModel)]="universidadService.selectedUniversidad.direccion"
+        placeholder="Dirección"
+        >
+    </div>
+    <div class="wrap-input">
+      <div class="wrap-input">
+        <input 
+          type="number"
+          class="input"
+          name="telefono"
+          #telefono="ngModel"
+          [(ngModel)]="universidadService.selectedUniversidad.telefono"
+          placeholder="Telefono"
+          >
+     </div>
+    </div>
+    <div class="wrap-input">
+      <input 
+        type="text"
+        class="input"
+        name="color"
+        #color="ngModel"
+        [(ngModel)]="universidadService.selectedUniversidad.color"
+        placeholder="Color"
+        >
+    </div>
+    <div class="wrap-input">
+      <input 
+        type="text"
+        class="input"
+        name="transparen"
+        #transparen="ngModel"
+        [(ngModel)]="universidadService.selectedUniversidad.transparen"
+        placeholder="Transparent"
+        >
+    </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">
+            <i class="fas fa-plus-circle"></i> Add A Product
+        </button>
+        <button class="btn btn-secondary" type="reset" (click)="resetForm(productForm)">
+            <i class="fas fa-sync-alt"></i> Reset
+        </button>
+      </div>
+    </form>
+  </div>
+</ion-content>
+
+<!--<div class="card mt-5">
+  <div class="card-body">
+      <form #universidadForm="ngForm" (ngSubmit)="onSubmit(universidadForm)">
+          <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="universidadService.selectedUniversidad.$key">
+
+          <div class="wrap-input">
+            <input 
+              type="text"
+              class="input"
+              name="name"
+              #name="ngModel"
+              [(ngModel)]="universidadService.selectedUniversidad.name"
+              placeholder="Add A Product"
+              >
+          </div>
+          <div class="form-group">
+              <input 
+                type="text"
+                class="form-control"
+                name="category"
+                #category="ngModel"
+                [(ngModel)]="universidadService.selectedUniversidad.category"
+                placeholder="Add A Category"
+                >
+            </div>
+          <div class="form-group">
+            <input 
+              type="text"
+              class="form-control"
+              name="location"
+              #location="ngModel"
+              [(ngModel)]="universidadService.selectedUniversidad.location"
+              placeholder="Add A Location"
+              >
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text">$</span>
+              </div>
+              <input 
+                type="number"
+                class="form-control"
+                name="price"
+                #price="ngModel"
+                [(ngModel)]="universidadService.selectedUniversidad.price"
+                placeholder="Add A Price"
+                >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">
+                <i class="fas fa-plus-circle"></i> Add A Product
+            </button>
+            <button class="btn btn-secondary" type="reset" (click)="resetForm(productForm)">
+                <i class="fas fa-sync-alt"></i> Reset
+            </button>
+          </div>
+        </form>
+  </div>
+</div>!-->

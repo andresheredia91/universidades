@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body">
+    <form #universidadForm="ngForm" (ngSubmit)="onSubmit(universidadForm)">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="nombre"
+          #name="ngModel"
+          [(ngModel)]="universidadService.selectedUniversidad"
+          placeholder="Agregue Nombre"
+          >
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+
+
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+    <ion-button fill="clear" color="primary" (click)="back()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+		<ion-title class="ion-text-center title-font">Registro</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+  <svg class="back-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#F1C21B"
+      d="M37.6,-44.7C46.8,-37.1,51,-23.4,57.7,-7C64.4,9.4,73.6,28.6,66.4,35.7C59.2,42.9,35.6,37.9,16.5,44.6C-2.6,51.3,-17.3,69.5,-26.7,68.3C-36.1,67.1,-40.2,46.3,-49.6,29.1C-59,11.9,-73.6,-1.8,-75.1,-16.8C-76.7,-31.7,-65.3,-47.9,-50.6,-54.6C-35.9,-61.2,-17.9,-58.3,-1.9,-56.1C14.2,-53.9,28.4,-52.3,37.6,-44.7Z"
+      transform="translate(100 100)" />
+  </svg>
+
+  <div class="ion-padding">
+
+    <form class="ion-padding">
+
+      <div class="wrap-input">
+        <input class="input" type="text" name="user-nombres" [(ngModel)]="userInfo.nombres" placeholder="Nombres">
+      </div>
+
+      <div class="wrap-input">
+        <input class="input" type="text" name="user-apellidos" [(ngModel)]="userInfo.apellidos" placeholder="Apellidos">
+      </div>
+
+      <div class="wrap-input">
+        <input class="input" type="cel" name="user-celular" [(ngModel)]="userInfo.celular" placeholder="Celular">
+      </div>
+
+      <div class="wrap-input">
+        <input class="input" type="text" name="user-correo" [(ngModel)]="userInfo.correo" placeholder="Correo Electronico">
+      </div>
+
+      <div class="wrap-input">
+        <input class="input" type="password" name="contrasenna"  [(ngModel)]="userInfo.contrasenna" placeholder="Contraseña">
+      </div>
+      <div class="wrap-input">
+        <input class="input" type="password" name="confirmarContrasenna" [(ngModel)]="userInfo.confirmarContrasenna" placeholder="Confirmar Contraseña">
+      </div>
+
+      <div class="container-form-btn">
+        <button class="form-btn custom-font" (click)="signup()">
+          Registrar
+        </button>
+      </div>
+
+
+    </form>
+
+  </div>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <svg style="z-index: -1;"  class="bar-footer" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#F1C21B" d="M41.7,-45.2C53.5,-39.9,62.1,-26.2,67.6,-9.8C73.1,6.6,75.4,25.8,67.5,38.6C59.7,51.5,41.6,58.1,25.6,59.2C9.5,60.2,-4.5,55.7,-20.2,51.6C-35.9,47.6,-53.2,44.2,-58.4,34.2C-63.7,24.2,-56.8,7.7,-50.4,-5.4C-43.9,-18.4,-37.7,-28,-29.4,-34C-21,-40,-10.5,-42.4,2.2,-45C15,-47.7,30,-50.6,41.7,-45.2Z" transform="translate(100 100)" />
+    </svg>
+    <p class="ion-text-center custom-font" style="padding: 0px;" >Ya tienes una cuenta? <a [routerLink]="['/login']">Iniciar Sesion</a></p>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\..\\Bitnami\\wappstack-7.2.34-0\\apache2\\htdocs\\vue"
+		},
+		{
+			"path": "..\\.."
+		}
+	],
+	"settings": {}
+}

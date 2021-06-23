@@ -1,0 +1,28 @@
+<ion-content>
+  <ion-grid fixed class="">
+      <ion-row class="ion-padding">
+        <ion-col size="12">
+          <div color="primary" class="ion-text-center" style="padding-top: 20px;
+          font-family: Livvic-Medium ;
+          font-size: 20px;">
+          
+          </div>
+          <div style="display: flex">
+              <ion-img style="margin: auto; max-width: 70%;padding: 20px;" src="../../../../assets/logo.svg"></ion-img>
+          </div>
+          <div class="ion-text-center">
+            <p class="textWelcome">
+              Buscador de universidades
+            </p>
+          </div>
+        </ion-col>
+        <ion-col size="12">
+          <div class="ion-text-center" style="max-width: 80%; margin: auto; padding-top: 30px;">
+              <ion-button style="height: 42px" expand="block" color="warning"   [routerLink]="[ '/login' ]"  >Iniciar</ion-button>
+              <ion-button style="margin-top: 5px; height: 40px" color="warning"  expand="block" fill="outline" [routerLink]="[ '/register' ]" >Registrar</ion-button>
+              <ion-button style="margin-top: 5px; height: 40px" color="warning"  expand="block" fill="outline" [routerLink]="[ '/register-universidad' ]" >Registrar Universidad</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,27 @@
+.labelTitle {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.headerCustom {
+    position: relative;
+    .backButtom {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 999;
+    }
+
+    ion-img {
+        filter: grayscale(50%);
+    }
+
+    .titleHeader {
+        padding: 10px 20px;
+        color: white;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+}
