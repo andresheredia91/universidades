@@ -23,7 +23,6 @@
 
     <form class="ion-padding" #universidadForm="ngForm" (ngSubmit)="onSubmit(universidadForm)">
       <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="universidadService.selectedUniversidad.$key">
-      
       <div class="wrap-input">
         <input class="input" type="text" name="name" #name="ngModel" [(ngModel)]="universidadService.selectedUniversidad.nombre" placeholder="Nombre">
       </div>
@@ -111,93 +110,131 @@
           placeholder="Nombre Principal"
           >
       </div>
-    <div class="wrap-input">
-      <input 
-        type="text"
-        class="input"
-        name="mision"
-        #mision="ngModel"
-        [(ngModel)]="universidadService.selectedUniversidad.mision"
-        placeholder="Misión"
-        >
-    </div>
-    <div class="wrap-input">
-      <input 
-        type="text"
-        class="input"
-        name="vision"
-        #vision="ngModel"
-        [(ngModel)]="universidadService.selectedUniversidad.vision"
-        placeholder="Visión"
-        >
-    </div>
-    <div class="wrap-input">
-      <input 
-        type="text"
-        class="input"
-        name="foto"
-        #foto="ngModel"
-        [(ngModel)]="universidadService.selectedUniversidad.foto"
-        placeholder="Foto"
-        >
-    </div>
-    <div class="wrap-input">
-      <input 
-        type="text"
-        class="input"
-        name="logo"
-        #logo="ngModel"
-        [(ngModel)]="universidadService.selectedUniversidad.logo"
-        placeholder="Logo"
-        >
-    </div>
-    <div class="wrap-input">
-      <input 
-        type="text"
-        class="input"
-        name="direccion"
-        #direccion="ngModel"
-        [(ngModel)]="universidadService.selectedUniversidad.direccion"
-        placeholder="Dirección"
-        >
-    </div>
-    <div class="wrap-input">
       <div class="wrap-input">
         <input 
-          type="number"
+          type="text"
           class="input"
-          name="telefono"
-          #telefono="ngModel"
-          [(ngModel)]="universidadService.selectedUniversidad.telefono"
-          placeholder="Telefono"
+          name="mision"
+          #mision="ngModel"
+          [(ngModel)]="universidadService.selectedUniversidad.mision"
+          placeholder="Misión"
           >
-     </div>
+      </div>
+      <div class="wrap-input">
+        <input 
+          type="text"
+          class="input"
+          name="vision"
+          #vision="ngModel"
+          [(ngModel)]="universidadService.selectedUniversidad.vision"
+          placeholder="Visión"
+          >
+      </div>
+      <!--<div class="wrap-input">
+        <input 
+          type="text"
+          class="input"
+          name="foto"
+          #foto="ngModel"
+          [(ngModel)]="universidadService.selectedUniversidad.foto"
+          placeholder="Foto"
+          readonly
+          >
+      </div>!-->
+      
+      <!--<div class="wrap-input">
+        <input 
+          type="text"
+          class="input"
+          name="logo"
+          #logo="ngModel"
+          [(ngModel)]="universidadService.selectedUniversidad.logo"
+          placeholder="Logo"
+          readonly
+          >
+      </div>!-->
+      <div class="wrap-input">
+        <input 
+          type="text"
+          class="input"
+          name="direccion"
+          #direccion="ngModel"
+          [(ngModel)]="universidadService.selectedUniversidad.direccion"
+          placeholder="Dirección"
+          >
+      </div>
+      <div class="wrap-input">
+        <div class="wrap-input">
+          <input 
+            type="number"
+            class="input"
+            name="telefono"
+            #telefono="ngModel"
+            [(ngModel)]="universidadService.selectedUniversidad.telefono"
+            placeholder="Telefono"
+            >
+      </div>
+      </div>
+      
+      <!--<div class="wrap-input">
+        <input 
+          type="text"
+          class="input"
+          name="color"
+          #color="ngModel"
+          [(ngModel)]="universidadService.selectedUniversidad.color"
+          placeholder="Color"
+          readonly
+          >
+      </div>!-->
+      <div class="wrap-input">
+        <input 
+          type="text"
+          class="input"
+          name="transparent"
+          #transparent="ngModel"
+          [(ngModel)]="universidadService.selectedUniversidad.transparent"
+          placeholder="Transparent"
+          >
     </div>
-    <div class="wrap-input">
-      <input 
-        type="text"
-        class="input"
-        name="color"
-        #color="ngModel"
-        [(ngModel)]="universidadService.selectedUniversidad.color"
-        placeholder="Color"
-        >
-    </div>
-    <div class="wrap-input">
-      <input 
-        type="text"
-        class="input"
-        name="transparen"
-        #transparen="ngModel"
-        [(ngModel)]="universidadService.selectedUniversidad.transparen"
-        placeholder="Transparent"
-        >
-    </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">
-            <i class="fas fa-plus-circle"></i> Add A Product
+      <div>
+        <label>FOTO</label>
+      <div>
+          <select id="foto" name="foto" #foto="ngModel" [(ngModel)]="universidadService.selectedUniversidad.foto" placeholder="Seleccione Foto"  style="width:100%;" >
+              <option selected>Seleccione una Foto</option>
+              <option value="../../assets/unitropico.png">UNITROPICO</option>
+              <option value="../../assets/uniremington.png">UNIREMINGTON</option>
+              <option value="../../assets/unisangil.png">UNISANGIL</option>
+              <option value="../../assets/uniminuto.png">UNIMINUTO</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label>LOGGO</label>
+        <div class="wrap-select">
+          <select id="logo" name="logo" #logo="ngModel" [(ngModel)]="universidadService.selectedUniversidad.logo" placeholder="Seleccione Logo" style="width:100%;" >
+              <option selected>Seleccione un Logo</option>
+              <option value="../../assets/logos/unitropico.png">UNITROPICO</option>
+              <option value="../../assets/logos/uniremington.png">UNIREMINGTON</option>
+              <option value="../../assets/logos/unisangil.png">UNISANGIL</option>
+              <option value="../../assets/logos/uniminuto.png">UNIMINUTO</option>
+          </select>
+        </div>
+      </div>
+      <div>
+          <select id="color" name="color" #color="ngModel" multiple [(ngModel)]="universidadService.selectedUniversidad.color" placeholder="Seleccione Color" style="width:100%;" >
+              <option selected>Seleccione un Color</option>
+              <option value="#17202A">Negro</option>
+              <option value="#f72e0a">Rojo</option>
+              <option value="#FFEE58">Amarillo</option>
+              <option value="#1976D2">Azul</option>
+          </select>
+      </div>
+      <div class="container-form-btn">
+        <button class="form-btn custom-font" type="submit">
+            <i class="fas fa-plus-circle"></i> Registrese
         </button>
-        <button class="btn btn-secondary" type="reset" (click)="resetForm(productForm)">
+        <button class="form-btn custom-font" type="reset" (click)="resetForm(universidadForm)">
             <i class="fas fa-sync-alt"></i> Reset
         </button>
       </div>
@@ -211,7 +248,7 @@
           <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="universidadService.selectedUniversidad.$key">
 
           <div class="wrap-input">
-            <input 
+            <input
               type="text"
               class="input"
               name="name"
@@ -221,7 +258,7 @@
               >
           </div>
           <div class="form-group">
-              <input 
+              <input
                 type="text"
                 class="form-control"
                 name="category"
@@ -231,7 +268,7 @@
                 >
             </div>
           <div class="form-group">
-            <input 
+            <input
               type="text"
               class="form-control"
               name="location"
@@ -245,7 +282,7 @@
               <div class="input-group-prepend">
                   <span class="input-group-text">$</span>
               </div>
-              <input 
+              <input
                 type="number"
                 class="form-control"
                 name="price"
@@ -267,3 +304,8 @@
         </form>
   </div>
 </div>!-->
+
+
+
+
+

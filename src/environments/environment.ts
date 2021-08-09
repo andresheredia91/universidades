@@ -20,7 +20,7 @@ export const universidades: Universidad[] = [
     logo: "../../assets/logos/unisangil.png",
     direccion: "Cl. 24 #31100, Yopal, El Milagro, Casanare",
     telefono: "3106282527",
-    color: "#1563F5",
+    color: "#FFFF33",
     colorTransparent: "#ffc40952",
     listaProgramas: [
       'Administración de empresas - Presencial',

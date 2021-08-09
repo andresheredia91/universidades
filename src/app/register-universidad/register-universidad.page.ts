@@ -15,6 +15,7 @@ import { NgForm } from '@angular/forms';
 export class RegisterUniversidadPage implements OnInit {
 
   userInfo: any = {};
+  
 
   constructor(
     private commonService: CommonService,
@@ -33,14 +34,13 @@ export class RegisterUniversidadPage implements OnInit {
       this.universidadService.insertUniversidad(universidadForm.value);
     else
     this.universidadService.updateUniversidad(universidadForm.value);
-    
     this.resetForm(universidadForm);
   }
 
   resetForm(universidadForm?: NgForm)
   {
     if(universidadForm != null)
-    universidadForm.reset();
+      universidadForm.reset();
       this.universidadService.selectedUniversidad = new UniversidadOriginal();
   }
 

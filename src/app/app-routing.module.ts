@@ -30,6 +30,14 @@ const routes: Routes = [
   {
     path: 'welcome',
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
+  },
+  {
+    path: 'university-detail',
+    loadChildren: () => import('./university-detail/university-detail.module').then( m => m.UniversityDetailPageModule)
+  },
+  {
+    path: 'mision-vision',
+    loadChildren: () => import('./mision-vision/mision-vision.module').then( m => m.MisionVisionPageModule)
   }
 ];
 

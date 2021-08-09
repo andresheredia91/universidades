@@ -8,16 +8,25 @@
     </div>
     <ion-img [src]='university.foto'> </ion-img>
     <div>
-    <span class="titleHeader" [style.background-color]="university.colorTransparent">
-      {{university.nombre}}
-    </span>
+      <span class="titleHeader" [style.background-color]="university.colorTransparent">
+        {{university.nombre}}
+      </span>
     </div>
-
   </div>
+
+  <div class="row header alling-center">
+    <div class="col" >MISION</div>
+    <div class="col">VISION</div>
+  </div>
+  <div class="row color">
+    <div class="col">{{university.mision}}</div>
+    <div class="col">{{university.vision}}</div>
+  </div>
+
+
 
 <!--
 
-  
   <ion-card>
     <ion-card-title>  </ion-card-title>
     </ion-card-header>
@@ -50,12 +59,12 @@
 -->
 
 
-<ion-button [routerLink]="['/mision-vision', idUniversity]">
+<!--<ion-button [routerLink]="['/mision-vision', university.principal]">
   Ver Misión/Visión
 </ion-button>
-<ion-button [routerLink]="['/lista-programas', idUniversity]">
+<ion-button [routerLink]="['/lista-programas', university.principal]">
   Ver lista de Programas
-</ion-button>
+</ion-button>!-->
 
 
   <ion-grid fixed>
