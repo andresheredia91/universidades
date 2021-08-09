@@ -222,7 +222,7 @@
         </div>
       </div>
       <div>
-          <select id="color" name="color" #color="ngModel" multiple [(ngModel)]="universidadService.selectedUniversidad.color" placeholder="Seleccione Color" style="width:100%;" >
+          <select id="color" name="color" #color="ngModel"  [(ngModel)]="universidadService.selectedUniversidad.color" placeholder="Seleccione Color" style="width:100%;" >
               <option selected>Seleccione un Color</option>
               <option value="#17202A">Negro</option>
               <option value="#f72e0a">Rojo</option>
@@ -230,6 +230,17 @@
               <option value="#1976D2">Azul</option>
           </select>
       </div>
+      <div class="wrap-input">
+        <ion-item>
+        <ion-label>Carreras</ion-label>
+        <ion-select multiple="true" [value]="[]" name="carrera" #color="ngModel"  [(ngModel)]="universidadService.selectedUniversidad.carrera">
+          <ion-select-option value="1">Sistemas</ion-select-option>
+          <ion-select-option value="2">Enfermeria</ion-select-option>
+          <ion-select-option value="3">Electronica</ion-select-option>
+          <ion-select-option value="4">Otros</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
       <div class="container-form-btn">
         <button class="form-btn custom-font" type="submit">
             <i class="fas fa-plus-circle"></i> Registrese

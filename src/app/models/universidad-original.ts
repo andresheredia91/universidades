@@ -25,4 +25,5 @@ export class UniversidadOriginal {
   telefono: number;
   color: string;
   transparent:string;
+  carrera: string[];
 }

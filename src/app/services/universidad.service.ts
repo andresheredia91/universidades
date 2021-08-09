@@ -29,7 +29,8 @@ export class UniversidadService {
       direccion: universidad.direccion,
       telefono: universidad.telefono,
       color: universidad.color,
-      transparent: universidad.transparent
+      transparent: universidad.transparent,
+      carrera: universidad.carrera
     });
   }
   updateUniversidad(universidad: UniversidadOriginal)
